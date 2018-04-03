@@ -120,3 +120,4 @@ make install-dom0 DESTDIR=%{buildroot}
 %defattr(-,root,root)
 
 %changelog
+@CHANGELOG@
