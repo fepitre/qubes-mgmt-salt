@@ -88,7 +88,6 @@ make install-dom0 DESTDIR=%{buildroot}
 /etc/salt/spm.repos.d/local.repo
 
 %attr(750, root, root) %dir /srv/formulas
-/srv/formulas/.gitignore
 
 %attr(750, root, root) %dir /srv/pillar
 %config(noreplace) /srv/pillar/top.sls
