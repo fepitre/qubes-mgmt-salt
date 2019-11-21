@@ -9,7 +9,11 @@ URL:	   http://www.qubes-os.org/
 Group:     System administration tools
 BuildArch: noarch
 Requires:  qubes-mgmt-salt
+%if 0%{?centos} == 7
 BuildRequires: PyYAML
+%else
+BuildRequires: python3-yaml
+%endif
 BuildRequires: tree
 Requires(post): /usr/bin/qubesctl
 Conflicts:  qubes-mgmt-salt-dom0

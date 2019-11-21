@@ -12,7 +12,11 @@ Requires:  qubes-mgmt-salt
 Requires:  qubes-mgmt-salt-dom0-qvm
 Requires:  qubes-mgmt-salt-dom0-update
 Requires:  qubes-mgmt-salt-dom0-virtual-machines
+%if 0%{?centos} == 7
 BuildRequires: PyYAML
+%else
+BuildRequires: python3-yaml
+%endif
 BuildRequires: tree
 Conflicts:  qubes-mgmt-salt-vm
 
